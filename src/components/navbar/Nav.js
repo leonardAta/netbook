@@ -10,7 +10,7 @@ const Nav = () => {
       </div>
       <div className="nav_center">
         <div className="searchbar">
-          <Search />
+          <Search className="searchIcon" />
           <input placeholder="Search for friend or post" type="text" className="searchInput" />
         </div>
       </div>
