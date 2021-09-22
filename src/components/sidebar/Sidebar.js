@@ -7,6 +7,8 @@ import SchoolIcon from '@material-ui/icons/School';
 import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
 import React from 'react'
 import "./Sidebar.css"
+import { Users } from "../../dummyData"
+import CloseFriend from '../close-friends/CloseFriend';
 
 
 const Sidebar = () => {
@@ -54,22 +56,10 @@ const Sidebar = () => {
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr"/>
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImg" src="/assets/person/2.png" alt="" />
-            <span className="sidebarFriendName">Johnny Sims</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImg" src="/assets/person/3.png" alt="" />
-            <span className="sidebarFriendName">Meggie Harris</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImg" src="/assets/person/4.png" alt="" />
-            <span className="sidebarFriendName">Uche Mason</span>
-          </li>
-          <li className="sidebarFriend">
-            <img className="sidebarFriendImg" src="/assets/person/5.png" alt="" />
-            <span className="sidebarFriendName">Hallie Warren</span>
-          </li>
+          {Users.map(user => (
+            <CloseFriend key={user.id} user={user} />
+          ))}
+          
         </ul>
       </div>
     </div>
