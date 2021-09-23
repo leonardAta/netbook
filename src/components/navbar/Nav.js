@@ -1,12 +1,15 @@
 import React from 'react'
 import './Nav.css'
 import { Chat, Notifications, Person, Search } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
     <div className='nav_container'>
       <div className="nav_left">
-        <span className="logo">Netbook</span>
+        <Link to='/' style={{textDecoration:"none"}}>
+          <span className="logo">Netbook</span>
+        </Link>
       </div>
       <div className="nav_center">
         <div className="searchbar">

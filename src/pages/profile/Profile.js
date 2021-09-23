@@ -6,6 +6,7 @@ import Rightbar from '../../components/rightbar/Rightbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 
 const Profile = () => {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER
   return (
     <> 
       <Nav />
@@ -14,8 +15,8 @@ const Profile = () => {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img className="profileCoverImg" src="assets/post/4.jpg" alt="" />
-              <img className="profileUserImg" src="assets/person/5.png" alt="" />
+              <img className="profileCoverImg" src={`${PF}post/4.jpg`} alt="" />
+              <img className="profileUserImg" src={`${PF}person/5.png`} alt="" />
             </div>
             <div className="profileInfo">
               <h4 className="profileInfoName">Gina Holden</h4>
